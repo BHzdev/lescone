@@ -58,18 +58,8 @@ table {
   box-sizing: border-box;
 }
 
-p {
-  color: blue;
-}
-@media screen and (min-width: 760px) and (max-width: 1199px) {
-  p {
-    color: pink;
-  }
-}
-@media screen and (max-width: 759px) {
-  p {
-    color: aqua;
-  }
+div {
+  width: calc(50% - 20px);
 }
 
 /*# sourceMappingURL=style.css.map */

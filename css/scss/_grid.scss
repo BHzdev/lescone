@@ -29,12 +29,18 @@ $s-device: 480px;
   }
 }
 
-p{
-  color: blue;
-  @include d(m){
-    color: pink;
+// Função do grid
+
+@function grid($col, $offset: false) {
+  $width: $col / $cols * 100 + "%";
+  $result: calc(#{$width} - #{$gutter});
+  @if $offset == offset {
+    $gutter: $gutter / 2;
+    $result: calc(#{$width} + #{$gutter});
   }
-  @include d(s){
-    color: aqua;
-  }
+  @return $result;
+}
+
+div {
+  width: grid(6);
 }
